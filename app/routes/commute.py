@@ -1,14 +1,13 @@
 from fastapi import APIRouter, Query
-from app.models import CommuteRequest # To get input in correct format
+from models import CommuteRequest # To get input in correct format
 from app.utils.route_planner import get_route_with_crimes
-from backend.app.utils.database import crime_collection
+from app.utils.database import crime_collection
 import osmnx as ox
 import networkx as nx
 from shapely.geometry import LineString, Point
 from geopy.geocoders import Nominatim
 import geopandas as gpd
 import time
-from typing import List, Tuple
 
 router = APIRouter()
 

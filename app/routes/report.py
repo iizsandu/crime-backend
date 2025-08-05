@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.models import CrimeReport
-from backend.app.utils.database import crime_collection, report_collection
+from models import CrimeReport
+from app.utils.database import crime_collection, report_collection
 from bson import ObjectId
 
 router = APIRouter()
