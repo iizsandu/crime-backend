@@ -15,7 +15,7 @@ router = APIRouter()
 def get_safe_route(data: CommuteRequest):
     
     #Load the base map of Delhi
-    G = ox.io.load_graphml(filepath="delhi.graphml")
+    G = ox.io.load_graphml(filepath="graph/delhi.graphml")
 
     # Get Geocode for both origin and destination
     geolocator = Nominatim(user_agent="commute_mapper")
